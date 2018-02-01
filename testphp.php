@@ -17,13 +17,14 @@
 	
 	/**
 	 * Require and costants
-     */
-	 require $server_root.'vendor/autoload.php';
-	 require_once $server_root."services/mailer/mailer.php";
+     *
+	require $server_root.'vendor/autoload.php';
+	require_once $server_root."services/mailer/mailer.php";
+
 
 	echo '<br/>INIZIO call mailer test';
     $mailer = new mailer();
     echo '<br/>FINE call mailer test';
     
-    
+    */
 ?>
