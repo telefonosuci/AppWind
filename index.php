@@ -1,6 +1,6 @@
 <?php
 
-echo "here we are";
+echo "Test landing page";
 
 
 ?>
