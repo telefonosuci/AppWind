@@ -1,0 +1,72 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BFS URL Test</title>
+
+<script
+  src="http://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+    $("#pageMsg").html("This is BFS URL test call...");
+    
+    $("#bfsUlrTestCallBtn").click(function(){
+        callBFSUrl();
+        alert("Call sended");
+    });
+});
+
+    /**
+    * https://s1280779907.t.eloqua.com/e/f2.aspx?elqFormName=COLLAUDO_Form_LP_GigaSmartShareS7&elqSiteId=1280779907&emailAddress=francesco.imperato@sysdata.it&marker=www.wind3B-TEST.it/campagne/fibra?ExtSource=1589378_7997704_201601410_0&firstName=Francesco44&lastName=Imperato1&busPhone=3001001002&Note=Note..%20W3B%20001€%20èòàìùcaratteri??accentati&provincia1=BZ&consensoPrivacy=SI&leadIdW3B=1501112213131313
+    */
+function callBFSUrl() {
+    $.ajax({
+        url: "https://s1280779907.t.eloqua.com/e/f2.aspx",
+        type: "GET", 
+        contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+        data: { 
+            elqFormName: "COLLAUDO_Form_LP_GigaSmartShareS7",
+            elqSiteId: "1280779907",
+            emailAddress: "francesco.imperato@sysdata.it",
+            marker: "www.wind3B-TEST-4.it/campagne/fibra?ExtSource: 1589378_7997704_201601410_0",
+            firstName: "Francesco48",
+            lastName: "Imperato1",
+            busPhone: "3001001002",
+            Note: "Note-6.. W3B%20001€%20èòàìùchar? test 123",
+            provincia1: "BZ",
+            consensoPrivacy: "SI",
+            leadIdW3B: "1501112213131313"
+        },
+        success: function(response) {
+            var msg1='BFS URL call: success.';
+            console.log(msg1);
+            $("#resMsg").html(msg1);
+        },
+        error: function(xhr) {
+            var msg1='BFS URL call: error.';
+            console.log(msg1);
+            $("#resMsg").html(msg1);
+        }
+    });
+}
+
+</script>
+
+<div id="pageMsg"></div>
+    
+<div>
+    <label>Click to test:</label>
+    <input id="bfsUlrTestCallBtn" type="submit" value="BFS URL Call"/>
+</div>
+<div id="resMsg"></div>
+
+</body>
+</html>
+
