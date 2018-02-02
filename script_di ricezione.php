@@ -21,7 +21,7 @@ $csv_body = array(
 	array($name, $surname, $email)
 );
 
-syslog( LOG_INFO, "Include compose and send page");
+syslog( LOG_INFO, "Include compose and send page used to send the csv");
 
 include_once "compose_and_send.php";
 
