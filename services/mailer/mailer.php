@@ -8,7 +8,9 @@
 	$server_root=substr($this_path, 0, strpos($this_path, $contextapp)).$contextapp."/";
 	echo '<br/>MAILER : server_root: '.$server_root;
 	require_once $server_root."env/env_utils.php";
-	require_once $server_root."lib/phpmailer/class.phpmailer.php";
+	//require_once $server_root."lib/phpmailer/class.phpmailer.php";
+	require_once $server_root."lib/phpmailer/PHPMailerAutoload.php";
+	
 	require_once $server_root."services/logger/logger.php";
 
 	/**
