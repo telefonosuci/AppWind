@@ -120,6 +120,42 @@
 			return $this->php_mailer->Send();
 		}
 
+
+		public function sendMailExternalSmtp() {
+			$this->php_mailer->From      = $this->mail_from;
+			$this->php_mailer->FromName  = $this->mail_fromName;
+			$this->php_mailer->Subject   = $this->mail_subject;
+			$this->php_mailer->Body      = $this->mail_body;
+			//$this->php_mailer->AddAddress($this->mail_to);
+
+
+			$mail->IsSMTP(); // enable SMTP
+			$mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+			$mail->SMTPAuth = true; // authentication enabled
+			$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+			$mail->Host = "smtp.gmail.com";
+			$mail->Port = 465; // or 587
+			$mail->IsHTML(true);
+			$mail->Username = "telefonosuci@gmail.com";
+			$mail->Password = "harrybelafonte";
+
+
+
+			foreach($this->mail_to as $toAddress => $toName) {
+				$this->php_mailer->AddAddress($toAddress, $toName);
+			}
+			if(!empty($this->mail_ccs)) {
+				foreach($this->mail_ccs as $ccAddress => $ccName) {
+					$this->php_mailer->AddCC($ccAddress, $ccName);
+				}
+			}
+			$this->php_mailer->AddAttachment($this->mail_attachment, $this->mail_attachment_name);
+			return $this->php_mailer->Send();
+		}
+
+
+
+
 		public function isHTML($isHtml = true) {
 			$this->php_mailer->isHTML($isHtml);
 		}

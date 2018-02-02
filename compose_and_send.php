@@ -93,7 +93,10 @@
 	 */
 	$mailer = new mailer($csv_filename, $subject);
 	$logger->log('mailer initialized...');
-	$sending_result = $mailer->sendMail();
+	//$sending_result = $mailer->sendMail();
+	$sending_result = $mailer->sendMailExternalSmtp();
+
+
 	$logger->log('Report sending_result: ' . $sending_result);
 	if ($sending_result) {
 		// backup only if the report is correctly sended
