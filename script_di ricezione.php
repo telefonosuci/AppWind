@@ -6,7 +6,10 @@ $email=$_POST['emailAddress'];
 
 error_log("Buongiornooo!");
 
+error_log(print_r($_POST, TRUE));
 
+
+/* 
 error_log("Chiamata allo script di ricezione avvenuta con successo!");
 
 error_log("name = " . $name );
@@ -23,7 +26,7 @@ $csv_body = array(
 
 syslog( LOG_INFO, "Include compose and send page used to send the csv");
 
-include_once "compose_and_send.php";
+include_once "compose_and_send.php"; */
 
 
 ?>
