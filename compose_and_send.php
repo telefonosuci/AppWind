@@ -14,7 +14,8 @@
 	$this_path = dirname(__FILE__); 
 	$server_root=substr($this_path, 0, strpos($this_path, $contextapp)).$contextapp."/";
 	
-	require_once $server_root."env/env_utils.php";
+	//require_once $server_root."env/env_utils.php";
+	require_once "/env/env_utils.php";
 	
 	$utils = new utils();
 	$mailerPath=$utils->getEnvValue("mailer_php_path");
@@ -22,13 +23,13 @@
 	/**
 	 * Import the required service used to create customized .csv reports
 	 */
-	require_once $server_root."services/csvcreator/csvcreator.php";
+	require_once "/services/csvcreator/csvcreator.php";
 	/**
 	 * Import the required service used to send customized emails
 	 */
 	require_once $server_root.$mailerPath;
 	
-	require_once $server_root."services/logger/logger.php";
+	require_once "/services/logger/logger.php";
 	$logger = new logger();
 
 	/**
