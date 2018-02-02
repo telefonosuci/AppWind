@@ -129,15 +129,15 @@
 			//$this->php_mailer->AddAddress($this->mail_to);
 
 
-			$mail->IsSMTP(); // enable SMTP
-			$mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
-			$mail->SMTPAuth = true; // authentication enabled
-			$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
-			$mail->Host = "smtp.gmail.com";
-			$mail->Port = 465; // or 587
-			$mail->IsHTML(true);
-			$mail->Username = "telefonosuci@gmail.com";
-			$mail->Password = "harrybelafonte";
+			$this->php_mailer->IsSMTP(); // enable SMTP
+			$this->php_mailer->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+			$this->php_mailer->SMTPAuth = true; // authentication enabled
+			$this->php_mailer->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+			$this->php_mailer->Host = "smtp.gmail.com";
+			$this->php_mailer->Port = 465; // or 587
+			$this->php_mailer->IsHTML(true);
+			$this->php_mailer->Username = "telefonosuci@gmail.com";
+			$this->php_mailer->Password = "harrybelafonte";
 
 
 
