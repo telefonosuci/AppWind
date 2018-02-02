@@ -54,7 +54,7 @@
 		}
 
 		/**
-		 * Chiamata GET che estra il LeadScore model ID dal model name
+		 * Chiamata GET che estrae il LeadScore model ID dal model name
 		 * 
 		 * @return 
 		 */
