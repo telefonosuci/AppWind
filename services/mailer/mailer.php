@@ -3,7 +3,7 @@
 	/**
 	 * Import the library used to handle the email sending
 	 */
-	$contextapp="MailRestService";
+	$contextapp="app";
 	$this_path = dirname(__FILE__); 
 	$server_root=substr($this_path, 0, strpos($this_path, $contextapp)).$contextapp."/";
 	echo '<br/>MAILER : server_root: '.$server_root;
