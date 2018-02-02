@@ -24,7 +24,7 @@
 		 * Constructor
 		 */
 		public function __construct() {
-			$contextapp="app";
+			$contextapp="AppWind";
 			$this_path = dirname(__FILE__); 
 			$server_root=substr($this_path, 0, strpos($this_path, $contextapp)).$contextapp."/";
 			$this->filename_template = "MailRestService-log-";

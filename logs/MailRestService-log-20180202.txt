@@ -1,0 +1,15 @@
+2018-02-02 17:46:02 --- DEBUG PROD:  , livello_lead is  , elqCampaignId is  , marker is  , consensoPrivacy is  , elqSiteId is  , mailerpath is services/mailer/mailer.php
+2018-02-02 17:49:11 --- Error: the service is not called from Eloqua or subject or csv body are empty!
+			The IP is: ::1.
+			ElqSiteId is ,
+            elqSiteIdBFS hidden field is ,
+			Subject mail is Campagna_Eloqua,
+			CsvBody presence is true
+2018-02-02 17:50:24 --- DEBUG PROD:  , livello_lead is  , elqCampaignId is  , marker is  , consensoPrivacy is  , elqSiteId is 2042710490 , mailerpath is services/mailer/mailer.php
+2018-02-02 17:53:28 --- <br/>CHECK mail TO: key enrico.succhielli@thinkopen.it value 
+2018-02-02 17:53:32 --- mailer initialized...
+2018-02-02 17:53:36 --- Report sending_result: 1
+2018-02-02 18:30:37 --- DEBUG PROD:  , livello_lead is  , elqCampaignId is  , marker is  , consensoPrivacy is  , elqSiteId is 2042710490 , mailerpath is services/mailer/mailer.php
+2018-02-02 18:30:37 --- <br/>CHECK mail TO: key enrico.succhielli@thinkopen.it value 
+2018-02-02 18:30:37 --- mailer initialized...
+2018-02-02 18:30:37 --- Report sending_result: 1

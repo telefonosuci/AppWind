@@ -10,7 +10,7 @@
 	 * 
 	 */
 
-	$contextapp="app";
+	$contextapp="AppWind";
 	$this_path = dirname(__FILE__); 
 	$server_root=substr($this_path, 0, strpos($this_path, $contextapp)).$contextapp."/";
 	
@@ -93,8 +93,8 @@
 	 */
 	$mailer = new mailer($csv_filename, $subject);
 	$logger->log('mailer initialized...');
-	//$sending_result = $mailer->sendMail();
-	$sending_result = $mailer->sendMailExternalSmtp();
+	$sending_result = $mailer->sendMail();
+	//$sending_result = $mailer->sendMailExternalSmtp();
 
 
 	$logger->log('Report sending_result: ' . $sending_result);

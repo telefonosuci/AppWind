@@ -10,7 +10,7 @@
 	 * 
 	 */
 	 
-	 $contextapp="MailRestService";
+	 $contextapp="AppWind";
      $this_path = dirname(__FILE__); 
      $server_root=substr($this_path, 0, strpos($this_path, $contextapp)).$contextapp."/"; 
 	require_once $server_root."env/env_utils.php";

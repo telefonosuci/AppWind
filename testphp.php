@@ -8,7 +8,7 @@
     
 	echo 'PATH: '.dirname(__FILE__);
 	
-	$contextapp="MailRestService";
+	$contextapp="AppWind";
 	$this_path = dirname(__FILE__); 
 	$server_root=substr($this_path, 0, strpos($this_path, $contextapp)).$contextapp."/";
 	$server_root=dirname(__FILE__)."/";

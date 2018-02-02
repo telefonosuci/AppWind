@@ -5,7 +5,7 @@
 	 * Import the library used to handle the email sending
      * NOTA: if utile per percorso assoluto usato dal crontab per l'IMPORTER Esito Lead
 	 */
-	 $contextapp="MailRestService";
+	 $contextapp="AppWind";
 	 $this_path = dirname(__FILE__); 
 	 $server_root=substr($this_path, 0, strpos($this_path, $contextapp)).$contextapp."/";
 		require_once $server_root."lib/phpmailer/class.phpmailer.php";
