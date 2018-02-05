@@ -1,0 +1,4 @@
+2018-02-05 12:24:44 --- DEBUG PROD:  , livello_lead is  , elqCampaignId is  , marker is  , consensoPrivacy is  , elqSiteId is 2042710490 , mailerpath is services/mailer/mailer.php
+2018-02-05 12:24:44 --- <br/>CHECK mail TO: key enrico.succhielli@thinkopen.it value 
+2018-02-05 12:24:44 --- mailer initialized...
+2018-02-05 12:24:45 --- Report sending_result: 1
