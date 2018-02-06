@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-<style type="text/css" media="screen">
+  <style type="text/css" media="screen">
   /* RESET */ .elq-form * {
     margin: 0;
     padding: 0;
@@ -282,12 +282,9 @@
   }
 </style>
 
-
 </head>
-
 <body>
 <div>
-
   <form method="post" name="test-form-windapp" action="https://s2042710490.t.eloqua.com/e/f2" onsubmit="setTimeout(function(){if(document.querySelector){var s=document.querySelector('form#form58 input[type=submit]');if(s){s.disabled=true;}}},100);return true;" id="form58" class="elq-form" >
     <input value="test-form-windapp" type="hidden" name="elqFormName"  />
     <input value="2042710490" type="hidden" name="elqSiteId"  />
@@ -301,7 +298,7 @@
             <label for="field0" class="label-position top " >
               First Name
             </label>
-            <input id="field0" name="firstName" type="text" value="" class="field-size-top-large"  />
+            <input id="field0" name="firstName" type="text" value="<eloqua type='emailfield' syntax='FirstName' />" class="field-size-top-large"  />
           </p>
         </div>
       </div>
@@ -315,7 +312,7 @@
             <label for="field1" class="label-position top " >
               Last Name
             </label>
-            <input id="field1" name="lastName" type="text" value="" class="field-size-top-large"  />
+            <input id="field1" name="lastName" type="text" value="<eloqua type='emailfield' syntax='LastName' />" class="field-size-top-large"  />
           </p>
         </div>
       </div>
@@ -329,7 +326,7 @@
             <label for="field2" class="label-position top " >
               Email Address
             </label>
-            <input id="field2" name="emailAddress" type="text" value="" class="field-size-top-large"  />
+            <input id="field2" name="emailAddress" type="text" value="<eloqua type='emailfield' syntax='EmailAddress' />" class="field-size-top-large"  />
           </p>
         </div>
       </div>
@@ -421,6 +418,8 @@
       }
     }
   </script>
+
+
 </div>
 
 </body>

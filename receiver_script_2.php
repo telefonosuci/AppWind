@@ -2,7 +2,6 @@
 
 /*
     Eloqua form data
-
     [LP] => 57
     [firstName] => nom
     [lastName] => cognome
@@ -11,6 +10,14 @@
 */
 
 
+    print_r($_POST);
+
+    
+
+
+
+
+/*
 $name=$_POST['firstName'];
 $surname=$_POST['lastName'];
 $email=$_POST['emailAddress'];
@@ -18,7 +25,7 @@ echo "ciao";
 error_log("Buongiornooo!");
 
 error_log(print_r($_POST, TRUE));
-
+*/
 
 /* 
 error_log("Chiamata allo script di ricezione avvenuta con successo!");
