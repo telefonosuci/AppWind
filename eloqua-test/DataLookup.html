@@ -32,6 +32,9 @@
         function SetElqContent() {
             CreateRow('Email: ', GetElqContentPersonalizationValue('C_EmailAddress'));
             CreateRow('GUID: ', GetElqContentPersonalizationValue('C_GU_ID1'));
+            CreateRow('Lead Score: ', GetElqContentPersonalizationValue('C_Lead_Score'));
+            CreateRow('Lead Score - Engagement (Implicit): ', GetElqContentPersonalizationValue('C_Lead_Score___Implicit1'));
+            CreateRow('Churn score: ', GetElqContentPersonalizationValue('C_Churn_score1'));
         }
 
         _elqQ.push(['elqDataLookup', escape('a1f9c92198aa4bb1b78e32b0e8d6a254'), '<C_EmailAddress>i.palmacci@reply.it</C_EmailAddress>']);
