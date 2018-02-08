@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <style type="text/css" media="screen">
-  /* RESET */ 
-  .elq-form * {
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <title>Example form</title>
+
+<style type="text/css" media="screen">
+  /* RESET */ .elq-form * {
     margin: 0;
     padding: 0;
   }
@@ -18,8 +21,7 @@
     -moz-box-sizing:border-box;
     box-sizing:border-box;
   }
-  /* GENERIC */
-  .elq-form input {
+  /* GENERIC */.elq-form input {
     height: 16px;
     line-height: 16px;
   }
@@ -286,17 +288,17 @@
 </style>
 
 </head>
+
 <body>
 <div>
   <form method="post" name="test-form-windapp" action="https://s2042710490.t.eloqua.com/e/f2" onsubmit="setTimeout(function(){if(document.querySelector){var s=document.querySelector('form#form58 input[type=submit]');if(s){s.disabled=true;}}},100);return true;" id="form58" class="elq-form" >
-
-
-  
-
-
     <input value="test-form-windapp" type="hidden" name="elqFormName"  />
     <input value="2042710490" type="hidden" name="elqSiteId"  />
     <input name="elqCampaignId" type="hidden"  />
+
+    <input type="hidden" name="elqCustomerGUID" value="GUID_123456789">
+
+
     <div id="formElement0" class="sc-view form-design-field sc-static-layout item-padding sc-regular-size" >
       <div class="field-wrapper" >
       </div>
@@ -373,43 +375,27 @@
       outline: 1px solid #CC0000;
     }
   </style>
-
-
-
-
-<script type="text/javascript">
-
-  var _elqQ = _elqQ || [];
-
-    _elqQ.push(['elqSetSiteId', 'siteId']);
-
-    _elqQ.push(['elqTrackPageView']);
-
-
-
+  <script type="text/javascript" >
     var dom0 = document.querySelector('#form58 #field0');
     var field0 = new LiveValidation(dom0, {
-      validMessage: "", onlyOnBlur: false, wait: 300
-    }
-    );
+      validMessage: "", onlyOnBlur: false, wait: 300}
+                                   );
     var dom1 = document.querySelector('#form58 #field1');
     var field1 = new LiveValidation(dom1, {
-      validMessage: "", onlyOnBlur: false, wait: 300
-    }
-    );
+      validMessage: "", onlyOnBlur: false, wait: 300}
+                                   );
     var dom2 = document.querySelector('#form58 #field2');
     var field2 = new LiveValidation(dom2, {
-      validMessage: "", onlyOnBlur: false, wait: 300
-    }
-    );
-    function resetSubmitButton(e) {
+      validMessage: "", onlyOnBlur: false, wait: 300}
+                                   );
+    function resetSubmitButton(e){
       var submitButtons = e.target.form.getElementsByClassName('submit-button');
-      for (var i = 0; i < submitButtons.length; i++) {
+      for(var i=0;i<submitButtons.length;i++){
         submitButtons[i].disabled = false;
       }
     }
-    function addChangeHandler(elements) {
-      for (var i = 0; i < elements.length; i++) {
+    function addChangeHandler(elements){
+      for(var i=0; i<elements.length; i++){
         elements[i].addEventListener('change', resetSubmitButton);
       }
     }
@@ -421,7 +407,7 @@
     if (nodes) {
       for (i = 0, len = nodes.length; i < len; i++) {
         var status = nodes[i].dataset ? nodes[i].dataset.subscription : nodes[i].getAttribute('data-subscription');
-        if (status === 'true') {
+        if(status ==='true') {
           nodes[i].checked = true;
         }
       }
@@ -433,7 +419,7 @@
         var selectedValue = node.dataset ? node.dataset.value : node.getAttribute('data-value');
         if (selectedValue) {
           for (var j = 0; j < node.options.length; j++) {
-            if (node.options[j].value === selectedValue) {
+            if(node.options[j].value === selectedValue) {
               node.options[j].selected = 'selected';
               break;
             }
@@ -441,32 +427,7 @@
         }
       }
     }
-
-
-    var timerId = null, timeout = 5;
-
-    function WaitUntilCustomerGUIDIsRetrieved() {
-      if (!!(timerId)) {
-        if (timeout == 0) {
-          return;
-        }
-        if (typeof this.GetElqCustomerGUID === 'function') {
-          document.forms["test-form-windapp"].elements["elqCustomerGUID"].value = GetElqCustomerGUID();
-          return;
-        }
-        timeout -= 1;
-      }
-      timerId = setTimeout("WaitUntilCustomerGUIDIsRetrieved()", 500);
-      return;
-    }
-    window.onload = WaitUntilCustomerGUIDIsRetrieved;
-    _elqQ.push(['elqGetCustomerGUID']);
-</script>
-
-  
-
-
+  </script>
 </div>
-
 </body>
 </html>
