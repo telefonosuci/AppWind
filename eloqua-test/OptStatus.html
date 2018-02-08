@@ -1,0 +1,118 @@
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+        var _elqQ = _elqQ || [];
+        _elqQ.push(['elqSetSiteId', '2042710490']);
+        _elqQ.push(['elqTrackPageView']);
+
+        (function () {
+            function async_load() {
+                var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+                s.src = 'https://img03.en25.com/i/elqCfg.min.js';
+                var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+            }
+            if (window.addEventListener) window.addEventListener('DOMContentLoaded', async_load, false);
+            else if (window.attachEvent) window.attachEvent('onload', async_load);
+        })();
+    </script>
+</head>
+<body>
+    <div id="optstatus">
+    </div>
+    <script type='text/javascript'>
+        //<![CDATA[
+        var timerId, timeout;
+        timeout = 5;
+        timerId = null;
+
+        function WaitUntilStatusLoaded() {
+            if (!!(timerId)) {
+                if (timeout == 0) {
+                    CreateDiv('<p><b>Unknown Opt-Out Status</b></p><p>We were unable to determine your web monitoring status.</p><p>Click <a href="javascript:window.elqOptIn()" target="_top">here</a> to opt-in.</p>');
+                    return;
+                }
+                if (typeof this.elqGetOptOutStatus === 'function') {
+                    OptStatus();
+                    return;
+                }
+                timeout -= 1;
+            }
+            timerId = setTimeout("WaitUntilStatusLoaded()", 500);
+            return;
+        }
+
+        function CreateDiv(innerHTML) {
+            var div = document.createElement('div');
+            div.innerHTML = innerHTML;
+
+            document.getElementById('optstatus').appendChild(div);
+        }
+
+        function OptStatus() {
+            var elqOptOutStatus = this.elqGetOptOutStatus();
+            if (elqOptOutStatus == -1) {
+                CreateDiv('<p><b>No Cookie Support Detected</b></p><p>It appears as though you are not accepting cookies from the Eloqua system, so you are not a candidate for our web monitoring.</p>');
+            }
+            else {
+                if (elqOptOutStatus == 2) {
+                    CreateDiv('<p><b>Global Opt-Out</b></p><p>You are currently <b><font color="red">opted-out</font></b> of web monitoring on all websites that use the Eloqua system.  You can verify this by examining your cookie from "eloqua.com" and ensuring that all digits in the GUID (Globally Unique ID) are set to zero.</p><p>Click <a href="javascript:window.elqGlobalOptIn()" target="_top">here</a> to opt-in.</p>');
+                }
+                else {
+                    if (elqOptOutStatus == 1) {
+                        CreateDiv('<p><b>Opt-Out for www.eloqua.com</b></p><p>You are currently <b><font color="green">opted-in</font></b> for web monitoring on the www.eloqua.com website.</p><p>Click <a href="javascript:window.elqOptOut()" target="_top">here</a> to opt-out of web monitoring specific to this website.</p>');
+                        CreateDiv('<p><b>Global Opt-Out</b></p><p>You are currently <b><font color="green">opted-in</font></b> for web monitoring on websites that use the Eloqua system.  Please note that you can opt-out of Eloqua\'s web monitoring system on a specific website by accessing the privacy pages on that website.</p><p>Click <a href="javascript:window.elqGlobalOptOut()" target="_top">here</a> to opt-out of Eloqua\'s web monitoring system on all websites.</p>');
+                    }
+                    else if (elqOptOutStatus == 0) {
+                        CreateDiv('<p><b>Opt-Out for www.eloqua.com</b></p><p>You are currently <b><font color="red">opted-out</font></b> of web monitoring on the www.eloqua.com website.</p><p>Click <a href="javascript:window.elqOptIn()" target="_top">here</a> to opt-in for web monitoring on this website.</p>');
+                        CreateDiv('<p><b>Global Opt-Out</b></p><p>You are currently <b><font color="green">opted-in</font></b> for web monitoring on websites that use the Eloqua system.  Please note that you can opt-out of Eloqua\'s web monitoring system on a specific website by accessing the privacy pages on that website.</p><p>Click <a href="javascript:window.elqGlobalOptOut()" target="_top">here</a> to opt-out of Eloqua\'s web monitoring system on all websites.</p>');
+                    }
+                }
+            }
+        }
+        
+        function WaitUntilStatusChangedAndRefresh() {
+            if (!!(timerId)) {
+                if (timeout == 0) {
+                    CreateDiv('<p><b>Unable to change Opt-in/out status.  Please reload this page and try again.</p>');
+                    return;
+                }
+                if (typeof this.elqSetOptOutStatus === 'function') {
+                    location.href = location.href;
+                    return;
+                }
+                timeout -= 1;
+            }
+            timerId = setTimeout("WaitUntilStatusChangedAndRefresh()", 500);
+            return;
+        }
+
+        function elqOptIn() {
+            _elqQ.push(['elqOptIn']);
+            WaitUntilStatusChangedAndRefresh();
+        }
+
+        function elqOptOut() {
+            _elqQ.push(['elqOptOut']);
+            WaitUntilStatusChangedAndRefresh();
+        }
+
+        function elqGlobalOptIn() {
+            _elqQ.push(['elqGlobalOptIn']);
+            WaitUntilStatusChangedAndRefresh();
+        }
+
+        function elqGlobalOptOut() {
+            _elqQ.push(['elqGlobalOptOut']);
+            WaitUntilStatusChangedAndRefresh();
+        }
+
+        _elqQ.push(['elqOptStatus']);
+
+        window.onload = WaitUntilStatusLoaded;
+        //]]>
+    </script>
+</body>
+</html>
+
+

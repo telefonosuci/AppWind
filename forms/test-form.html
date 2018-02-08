@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <style type="text/css" media="screen">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <title>Example form</title>
+
+<style type="text/css" media="screen">
   /* RESET */ .elq-form * {
     margin: 0;
     padding: 0;
@@ -283,12 +288,17 @@
 </style>
 
 </head>
+
 <body>
 <div>
   <form method="post" name="test-form-windapp" action="https://s2042710490.t.eloqua.com/e/f2" onsubmit="setTimeout(function(){if(document.querySelector){var s=document.querySelector('form#form58 input[type=submit]');if(s){s.disabled=true;}}},100);return true;" id="form58" class="elq-form" >
     <input value="test-form-windapp" type="hidden" name="elqFormName"  />
     <input value="2042710490" type="hidden" name="elqSiteId"  />
     <input name="elqCampaignId" type="hidden"  />
+
+    <input type="hidden" name="elqCustomerGUID" value="GUID_123456789">
+
+
     <div id="formElement0" class="sc-view form-design-field sc-static-layout item-padding sc-regular-size" >
       <div class="field-wrapper" >
       </div>
@@ -418,9 +428,6 @@
       }
     }
   </script>
-
-
 </div>
-
 </body>
 </html>
