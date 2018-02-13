@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <title>Home Page</title>
+    <title>Second Page</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -38,13 +38,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<p>
-<?php
-echo "Test landing page";
-?>
-</p>
+<p>Second page</p>
 
-<a href="second_page.php">Other page</a>
 
 
     
