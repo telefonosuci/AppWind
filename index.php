@@ -40,6 +40,12 @@ echo "Test landing page";
 <a href="second_page.php">Other page</a>
 
 
+<?php
+
+    phpinfo();
+
+?> 
     
+
 </body>
 </html>

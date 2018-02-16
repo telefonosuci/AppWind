@@ -77,6 +77,9 @@
 	$csvCreator = new csvcreator();
 	$csv_filename = $csvCreator->createCSV($csv_body);
 	
+	error_log ("Log enrico!", 0);
+
+
 	// debug step
 	if ($isDebug) {
 		$logger->log('Report name is: ' . $csv_filename . '<br/>');

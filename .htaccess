@@ -1,0 +1,9 @@
+# suppress PHP errors from displaying in the browser
+php_flag display_startup_errors off
+php_flag display_errors off
+php_flag html_errors off
+
+# log PHP errors to a file
+php_flag log_errors on
+php_value error_reporting 32767
+php_value error_log "/var/www/html/AppWind/logs/php_error.log"
