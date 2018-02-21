@@ -1,0 +1,8 @@
+2018-02-20 11:54:27 --- DEBUG PROD:  , livello_lead is  , elqCampaignId is 55 , marker is dsds , consensoPrivacy is 1 , elqSiteId is 2042710490 , mailerpath is services/mailer/mailer.php
+2018-02-20 11:54:27 --- <br/>CHECK mail TO: key enrico.succhielli@thinkopen.it value enrico.succhielli@thinkopen.it
+2018-02-20 11:54:27 --- mailer initialized...
+2018-02-20 11:54:27 --- Report sending_result: 1
+2018-02-20 12:38:47 --- DEBUG PROD:  , livello_lead is  , elqCampaignId is 55 , marker is dsds , consensoPrivacy is 1 , elqSiteId is 2042710490 , mailerpath is services/mailer/mailer.php
+2018-02-20 12:38:47 --- <br/>CHECK mail TO: key enrico.succhielli@thinkopen.it value enrico.succhielli@thinkopen.it
+2018-02-20 12:38:47 --- mailer initialized...
+2018-02-20 12:38:47 --- Report sending_result: 1

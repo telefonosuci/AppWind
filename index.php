@@ -31,21 +31,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<p>
-<?php
-echo "Test landing page";
-?>
-</p>
-
-<a href="second_page.php">Other page</a>
-
-
 <?php
 
     phpinfo();
 
 ?> 
-    
 
 </body>
 </html>

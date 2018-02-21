@@ -692,12 +692,26 @@ class PHPMailer
             $subject = $this->encodeHeader($this->secureHeader($subject));
         }
 
+
+        
         //Can't use additional_parameters in safe_mode
         //@link http://php.net/manual/en/function.mail.php
         if (ini_get('safe_mode') or !$this->UseSendmailOptions or is_null($params)) {
+            echo "<br>here we are 21";
             $result = @mail($to, $subject, $body, $header);
+
+            echo $to;
+            echo $subject;
+            echo $body;
+            echo $header;
+            echo $result;
+
+
         } else {
+            echo "<br>here we are";
             $result = @mail($to, $subject, $body, $header, $params);
+
+            
         }
         return $result;
     }
@@ -1206,10 +1220,17 @@ class PHPMailer
      */
     public function send()
     {
+
+
+        echo"<br>sending the email";
         try {
             if (!$this->preSend()) {
+                
+                echo "<br>presend Is false";
                 return false;
             }
+
+            echo "<br>postsend";
             return $this->postSend();
         } catch (phpmailerException $exc) {
             $this->mailHeader = '';
@@ -1329,13 +1350,17 @@ class PHPMailer
             // Choose the mailer and send through it
             switch ($this->Mailer) {
                 case 'sendmail':
+                    echo "<br>we are here sendmail";
                 case 'qmail':
+                    echo "<br>we are here qmail";
                     return $this->sendmailSend($this->MIMEHeader, $this->MIMEBody);
                 case 'smtp':
                     return $this->smtpSend($this->MIMEHeader, $this->MIMEBody);
                 case 'mail':
+                    echo "<br>we are here mail";
                     return $this->mailSend($this->MIMEHeader, $this->MIMEBody);
                 default:
+                    echo "<br>we are here default";
                     $sendMethod = $this->Mailer.'Send';
                     if (method_exists($this, $sendMethod)) {
                         return $this->$sendMethod($this->MIMEHeader, $this->MIMEBody);

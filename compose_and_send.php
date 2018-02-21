@@ -31,6 +31,8 @@
 	require_once $server_root."services/logger/logger.php";
 	$logger = new logger();
 
+
+	echo"compose and send";
 	/**
 	 * Validation controls used to prevent a fail or not authorized executions
 	 * 

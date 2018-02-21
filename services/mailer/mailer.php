@@ -5,8 +5,14 @@
 	 */
 	$contextapp="AppWind";
 	$this_path = dirname(__FILE__); 
+	
+	
+	
 	$server_root=substr($this_path, 0, strpos($this_path, $contextapp)).$contextapp."/";
+	
 	echo '<br/>MAILER : server_root: '.$server_root;
+	
+	echo '<br><br>';
 	require_once $server_root."env/env_utils.php";
 	//require_once $server_root."lib/phpmailer/class.phpmailer.php";
 	require_once $server_root."lib/phpmailer/PHPMailerAutoload.php";
@@ -60,6 +66,8 @@
 			
 			// mail to:
 			$mail_to_str=$this->utils->getEnvValue("mail_to");
+
+			
 			$mail_to_arr_temp = explode(",", $mail_to_str);			
 			foreach ($mail_to_arr_temp as $single_mail_to) {
 				$mail_to_associative_temp = explode('/', $single_mail_to);
@@ -109,7 +117,10 @@
 			$this->php_mailer->FromName  = $this->mail_fromName;
 			$this->php_mailer->Subject   = $this->mail_subject;
 			$this->php_mailer->Body      = $this->mail_body;
-			//$this->php_mailer->AddAddress($this->mail_to);
+			
+			print_r($this->mail_to);
+			
+			$this->php_mailer->AddAddress($this->mail_to);
 			foreach($this->mail_to as $toAddress => $toName) {
 				$this->php_mailer->AddAddress($toAddress, $toName);
 			}
@@ -119,10 +130,15 @@
 				}
 			}
 			$this->php_mailer->AddAttachment($this->mail_attachment, $this->mail_attachment_name);
+			
+			echo "<br>Sending the email";
+			
+			
 			return $this->php_mailer->Send();
+
 		}
 
-
+/*
 		public function sendMailExternalSmtp() {
 			$this->php_mailer->From      = $this->mail_from;
 			$this->php_mailer->FromName  = $this->mail_fromName;
@@ -155,7 +171,7 @@
 			return $this->php_mailer->Send();
 		}
 
-
+*/
 
 
 		public function isHTML($isHtml = true) {
