@@ -34,6 +34,9 @@
                 div.innerHTML = '<div class="elqOptInBannerText" >This website would like to use cookies to store information on your computer which will help to customize your interactions with us and provide you with a better browsing experience. You may delete and block cookies from this site, but parts of the site may not function as a result. More information about cookies and your choices can be found in our Privacy Policy. To accept cookies from this site, please click the \'I Accept\' button below.&nbsp;&nbsp;&nbsp; <input type="button" id="elqOptInButton" value="I Accept" onClick="elqVisitorTrackingOptIn();document.getElementById(\'elqOptInBannerDiv\').style.display = \'none\'" class="elqButton" />&nbsp;&nbsp;<input type="button" id="elqOptOutButton" value="I Decline" onClick="elqVisitorTrackingOptOut();document.getElementById(\'elqOptInBannerDiv\').style.display = \'none\';" class="elqButton" /></div><div class="elqClose" onclick="document.getElementById(\'elqOptInBannerDiv\').style.display = \'none\';">x</div>';
                 document.body.appendChild(div);
             }
+
+            elqCreateOptInBanner();
+
         </script>
         
         
