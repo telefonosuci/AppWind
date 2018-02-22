@@ -1,2 +1,4 @@
-vendor/
-.htaccess
+vendor
+log
+reports
+
