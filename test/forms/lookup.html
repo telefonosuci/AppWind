@@ -1,0 +1,288 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <script type="text/javascript">
+
+        var _elqQ = _elqQ || [];
+        
+        _elqQ.push(['elqSetSiteId', '2042710490']);
+        //_elqQ.push(['elqTrackPageView']);
+        
+        (function () {
+            
+            function async_load() {
+            
+                var s = document.createElement('script'); 
+                s.type = 'text/javascript'; 
+                s.async = true;
+                s.src = '//img03.en25.com/i/elqCfg.min.js';
+                var x = document.getElementsByTagName('script')[0]; 
+                x.parentNode.insertBefore(s, x);
+            }
+
+            if (window.attachEvent) { 
+                window.attachEvent('onload', async_load); 
+            } else { 
+                window.addEventListener('DOMContentLoaded', async_load, false); 
+            }
+
+
+
+            
+
+        })();
+
+
+        var timerId = null, timeout = 5;
+        function WaitUntilCustomerGUIDIsRetrieved() {
+            if (!!(timerId)) {
+                if (timeout == 0) {
+                    return;
+                }
+                if (typeof this.GetElqCustomerGUID === 'function') {
+                    var guid =GetElqCustomerGUID();
+                    document.forms["EloquaFormName"].elements["elqCustomerGUID"].value = guid;
+                    alert(guid); 
+                    return; 
+                }
+                timeout -= 1;
+            }
+        
+            timerId = setTimeout("WaitUntilCustomerGUIDIsRetrieved()", 500);
+            return; 
+        }
+        
+        window.onload = WaitUntilCustomerGUIDIsRetrieved;
+        _elqQ.push(['elqGetCustomerGUID']);
+
+
+        _elqQ.push(['elqDataLookup', escape('ce7a31a7fcfd4739ac63d61758b738bf'),'<C_EmailAddress>i.palmacci@reply.it</C_EmailAddress>']);
+
+
+
+
+    </script>
+
+</head>
+<body>
+    <div id="contactinfo">
+    </div>
+</body>
+<script type="text/javascript">
+
+    function CreateRow(label, value) {
+        var p = document.createElement('p');
+        var b = document.createElement('b');
+        p.appendChild(b);
+        b.appendChild(document.createTextNode(label));
+        p.appendChild(document.createTextNode(value));
+        document.getElementById('contactinfo').appendChild(p);
+    }
+    
+    function SetElqContent(){ 
+        if (this.GetElqContentPersonalizationValue){
+          CreateRow('Accessi fattura 2M: ', GetElqContentPersonalizationValue('C_Accessi_fattura_2M1'));
+          CreateRow('ACCOUNT ID FACEBOOK: ', GetElqContentPersonalizationValue('C_ACCOUNT_ID_FACEBOOK1'));
+          CreateRow('ACCOUNT ID TWITTER: ', GetElqContentPersonalizationValue('C_ACCOUNT_ID_TWITTER1'));
+          CreateRow('ACTIVE SUBSCRIPTIONS WLN: ', GetElqContentPersonalizationValue('C_ACTIVE_SUBSCRIPTIONS_WLN1'));
+          CreateRow('Address 1: ', GetElqContentPersonalizationValue('C_Address1'));
+          CreateRow('Address 2: ', GetElqContentPersonalizationValue('C_Address2'));
+          CreateRow('Address 3: ', GetElqContentPersonalizationValue('C_Address3'));
+          CreateRow('Age: ', GetElqContentPersonalizationValue('C_Age1'));
+          CreateRow('AGEING DAYS: ', GetElqContentPersonalizationValue('C_AGEING_DAYS1'));
+          CreateRow('AGEING RANGE DESCR: ', GetElqContentPersonalizationValue('C_AGEING_RANGE_DESCR1'));
+          CreateRow('Aging cliente billable: ', GetElqContentPersonalizationValue('C_Aging_cliente_billable1'));
+          CreateRow('Aging cliente rete: ', GetElqContentPersonalizationValue('C_Aging_cliente_rete1'));
+          CreateRow('Annual Revenue: ', GetElqContentPersonalizationValue('C_Annual_Revenue1'));
+          CreateRow('Billing Shock: ', GetElqContentPersonalizationValue('C_Billing_Shock1'));
+          CreateRow('Business Phone: ', GetElqContentPersonalizationValue('C_BusPhone'));
+          CreateRow('Canale acquisizione: ', GetElqContentPersonalizationValue('C_Canale_acquisizione1'));
+          CreateRow('Canale preferito: ', GetElqContentPersonalizationValue('C_Canale_preferito1'));
+          CreateRow('Carta identita: ', GetElqContentPersonalizationValue('C_Carta_identita1'));
+          CreateRow('Categoria commerciale: ', GetElqContentPersonalizationValue('C_Categoria_commerciale1'));
+          CreateRow('Cattivo pagatore: ', GetElqContentPersonalizationValue('C_Cattivo_pagatore1'));
+          CreateRow('CATTIVO PAGATORE (CLDB): ', GetElqContentPersonalizationValue('C_CATTIVO_PAGATORE__CLDB_1'));
+          CreateRow('CF: ', GetElqContentPersonalizationValue('C_Codice_fiscale1'));
+          CreateRow('Churn score: ', GetElqContentPersonalizationValue('C_Churn_score1'));
+          CreateRow('Churn score old: ', GetElqContentPersonalizationValue('C_Churn_score_old1'));
+          CreateRow('City: ', GetElqContentPersonalizationValue('C_City'));
+          CreateRow('CLASSE DIPENDENTI: ', GetElqContentPersonalizationValue('C_CLASSE_DIPENDENTI1'));
+          CreateRow('Cluster: ', GetElqContentPersonalizationValue('C_Cluster1'));
+          CreateRow('Cluster partnership: ', GetElqContentPersonalizationValue('C_Cluster_partnership1'));
+          CreateRow('Codice ATECO: ', GetElqContentPersonalizationValue('C_Codice_ATECO1'));
+          CreateRow('Codice SIC: ', GetElqContentPersonalizationValue('C_Codice_SIC1'));
+          CreateRow('Collection: ', GetElqContentPersonalizationValue('C_Collection1'));
+          CreateRow('Commercial Opt-in: ', GetElqContentPersonalizationValue('C_Commercial_Opt_in1'));
+          CreateRow('Company: ', GetElqContentPersonalizationValue('C_Company'));
+          CreateRow('Company Revenue: ', GetElqContentPersonalizationValue('C_Company_Revenue1'));
+          CreateRow('Company Size: ', GetElqContentPersonalizationValue('C_Company_Size1'));
+          CreateRow('Complaint count 1M: ', GetElqContentPersonalizationValue('C_Complaint_count_1M1'));
+          CreateRow('Complaint count 3M: ', GetElqContentPersonalizationValue('C_Complaint_count_3M1'));
+          CreateRow('CONSENSO CONTATTO MAIL: ', GetElqContentPersonalizationValue('C_CONSENSO_CONTATTO_MAIL1'));
+          CreateRow('CONSENSO CONTATTO TELEFONO: ', GetElqContentPersonalizationValue('C_CONSENSO_CONTATTO_TELEFONO1'));
+          CreateRow('Consenso Email: ', GetElqContentPersonalizationValue('C_Consenso_Email1'));
+          CreateRow('Consenso Telefonico: ', GetElqContentPersonalizationValue('C_Consenso_Telefonico1'));
+          CreateRow('CONTATTO TELEFONICO PREFERITO PRS: ', GetElqContentPersonalizationValue('C_CONTATTO_TELEFONICO_PREFERITO_PRS1'));
+          CreateRow('Country: ', GetElqContentPersonalizationValue('C_Country'));
+          CreateRow('Data acquisizione: ', GetElqContentPersonalizationValue('C_Data_acquisizione1'));
+          CreateRow('Data Aggiornamento Contatto Tel: ', GetElqContentPersonalizationValue('C_Data_Aggiornamento_Contatto_Tel1'));
+          CreateRow('Data attivazione NetDB: ', GetElqContentPersonalizationValue('C_Data_attivazione_NetDB1'));
+          CreateRow('Data cambio circle: ', GetElqContentPersonalizationValue('C_Data_cambio_circle1'));
+          CreateRow('Data cambio stato coniugale: ', GetElqContentPersonalizationValue('C_Data_cambio_stato_coniugale1'));
+          CreateRow('Data creazione contatto: ', GetElqContentPersonalizationValue('C_Data_creazione_contatto1'));
+          CreateRow('Data creazione P.IVA: ', GetElqContentPersonalizationValue('C_Data_creazione_P_IVAeld1'));
+          CreateRow('Data nascita: ', GetElqContentPersonalizationValue('C_Data_nascita1'));
+          CreateRow('Date Created: ', GetElqContentPersonalizationValue('C_DateCreated'));
+          CreateRow('Date Modified: ', GetElqContentPersonalizationValue('C_DateModified'));
+          CreateRow('Device ultima campagna: ', GetElqContentPersonalizationValue('C_Device_ultima_campagna1'));
+          CreateRow('Digital attitude: ', GetElqContentPersonalizationValue('C_Digital_attitude1'));
+          CreateRow('Dipendente FW: ', GetElqContentPersonalizationValue('C_Dipendente_FW1'));
+          CreateRow('Disdetta: ', GetElqContentPersonalizationValue('C_Disdetta1'));
+          CreateRow('Dunning: ', GetElqContentPersonalizationValue('C_Dunning1'));
+          CreateRow('Eloqua Contact ID: ', GetElqContentPersonalizationValue('ContactIDExt'));
+          CreateRow('Email Address: ', GetElqContentPersonalizationValue('C_EmailAddress'));
+          CreateRow('Email Address Domain: ', GetElqContentPersonalizationValue('C_EmailAddressDomain'));
+          CreateRow('Email Display Name: ', GetElqContentPersonalizationValue('C_EmailDisplayName'));
+          CreateRow('Employees: ', GetElqContentPersonalizationValue('C_Employees1'));
+          CreateRow('Enquiry count 1M: ', GetElqContentPersonalizationValue('C_Enquiry_count_1M1'));
+          CreateRow('Enquiry count 3M: ', GetElqContentPersonalizationValue('C_Enquiry_count_3M1'));
+          CreateRow('Fax: ', GetElqContentPersonalizationValue('C_Fax'));
+          CreateRow('First and Last Name: ', GetElqContentPersonalizationValue('C_FirstAndLastName'));
+          CreateRow('First Name: ', GetElqContentPersonalizationValue('C_FirstName'));
+          CreateRow('FLAG CONSENSO CONSODATA: ', GetElqContentPersonalizationValue('C_FLAG_CONSENSO_CONSODATA1'));
+          CreateRow('FLAG CONSENSO CRIBIS: ', GetElqContentPersonalizationValue('C_FLAG_CONSENSO_CRIBIS1'));
+          CreateRow('FLAG STRALCIO GECO: ', GetElqContentPersonalizationValue('C_FLAG_STRALCIO_GECO1'));
+          CreateRow('FLG  GEOLOCATNTRACKING CONSENT: ', GetElqContentPersonalizationValue('C_FLG__GEOLOCATNTRACKING_CONSENT1'));
+          CreateRow('FLG COMMERCIALTRACKING CONSENT: ', GetElqContentPersonalizationValue('C_FLG_COMMERCIALTRACKING_CONSENT1'));
+          CreateRow('FLG CONTACT QUALIFIED: ', GetElqContentPersonalizationValue('C_FLG_CONTACT_QUALIFIED1'));
+          CreateRow('FLG EDPC: ', GetElqContentPersonalizationValue('C_FLG_EDPC1'));
+          CreateRow('FLG LOYALTY: ', GetElqContentPersonalizationValue('C_FLG_LOYALTY1'));
+          CreateRow('FLG OUT NO SERVICE: ', GetElqContentPersonalizationValue('C_FLG_OUT_NO_SERVICE1'));
+          CreateRow('Frode: ', GetElqContentPersonalizationValue('C_Frode1'));
+          CreateRow('Gender: ', GetElqContentPersonalizationValue('C_Gender1'));
+          CreateRow('GU ID: ', GetElqContentPersonalizationValue('C_GU_ID1'));
+          CreateRow('ID CLASSE FATTURATO: ', GetElqContentPersonalizationValue('C_ID_CLASSE_FATTURATO1'));
+          CreateRow('Id partnership: ', GetElqContentPersonalizationValue('C_Id_partnership1'));
+          CreateRow('Industry: ', GetElqContentPersonalizationValue('C_Industry1'));
+          CreateRow('Integrated Marketing and Sales Funnel Stage: ', GetElqContentPersonalizationValue('C_Integrated_Marketing_and_Sales_Funnel_Stage'));
+          CreateRow('Job Role: ', GetElqContentPersonalizationValue('C_Job_Role1'));
+          CreateRow('Last CRMOD Campaign Recipient ID: ', GetElqContentPersonalizationValue('C_Last_CRMOD_Campaign_Recipient_ID1'));
+          CreateRow('Last CRMOD Lead Activity ID: ', GetElqContentPersonalizationValue('C_Last_CRMOD_Lead_Activity_ID1'));
+          CreateRow('Last Modified by CRM System: ', GetElqContentPersonalizationValue('C_LastModifiedByExtIntegrateSystem'));
+          CreateRow('Last Name: ', GetElqContentPersonalizationValue('C_LastName'));
+          CreateRow('Last SFDC Campaign ID: ', GetElqContentPersonalizationValue('C_SFDCLastCampaignID'));
+          CreateRow('Last SFDC Campaign Status: ', GetElqContentPersonalizationValue('C_SFDCLastCampaignStatus'));
+          CreateRow('Last Siebel OnDemand Campaign ID: ', GetElqContentPersonalizationValue('C_SiebelOnDemandLastCampaignID'));
+          CreateRow('Last Siebel OnDemand Campaign Name: ', GetElqContentPersonalizationValue('C_SiebelOnDemandLastCampaignName'));
+          CreateRow('Last Siebel OnDemand Campaign Status: ', GetElqContentPersonalizationValue('C_SiebelOnDemandLastCampaignStatus'));
+          CreateRow('Lead Rating - Combined: ', GetElqContentPersonalizationValue('C_Lead_Rating___Combined1'));
+          CreateRow('Lead Rating - Engagement (Implicit): ', GetElqContentPersonalizationValue('C_Lead_Rating___Implicit1'));
+          CreateRow('Lead Rating - Profile (Explicit): ', GetElqContentPersonalizationValue('C_Lead_Rating___Explicit1'));
+          CreateRow('Lead Score: ', GetElqContentPersonalizationValue('C_Lead_Score'));
+          CreateRow('Lead Score - Engagement (Implicit): ', GetElqContentPersonalizationValue('C_Lead_Score___Implicit1'));
+          CreateRow('Lead Score - High Value Website Content: ', GetElqContentPersonalizationValue('C_LS___High_Value_Website_Content1'));
+          CreateRow('Lead Score - Last High Touch Event Date: ', GetElqContentPersonalizationValue('C_Lead_Score___Last_High_Touch_Event_Date1'));
+          CreateRow('Lead Score - Profile (Explicit): ', GetElqContentPersonalizationValue('C_Lead_Score___Explicit1'));
+          CreateRow('Lead Score Date - Engagement - Most Recent: ', GetElqContentPersonalizationValue('C_Lead_Score_Date___Most_Recent1'));
+          CreateRow('Lead Score Date - Profile - Most Recent: ', GetElqContentPersonalizationValue('C_Lead_Score_Date___Profile___Most_Recent1'));
+          CreateRow('Lead Source - Most Recent: ', GetElqContentPersonalizationValue('C_Lead_Source___Most_Recent1'));
+          CreateRow('Lead Source - Original: ', GetElqContentPersonalizationValue('C_Lead_Source___Original1'));
+          CreateRow('Lead Status: ', GetElqContentPersonalizationValue('C_Lead_Status1'));
+          CreateRow('Lingua Preferita: ', GetElqContentPersonalizationValue('C_Lingua_Preferita1'));
+          CreateRow('Marital Status: ', GetElqContentPersonalizationValue('C_Marital_Status1'));
+          CreateRow('MD5 Hashed Business Phone: ', GetElqContentPersonalizationValue('C_MD5HashedBusPhone'));
+          CreateRow('MD5 Hashed Email Address: ', GetElqContentPersonalizationValue('C_MD5HashedEmailAddress'));
+          CreateRow('MD5 Hashed Mobile Phone: ', GetElqContentPersonalizationValue('C_MD5HashedMobilePhone'));
+          CreateRow('Migrazione tecnologia: ', GetElqContentPersonalizationValue('C_Migrazione_tecnologia1'));
+          CreateRow('MIN FINAL CREATED DATE: ', GetElqContentPersonalizationValue('C_MIN_FINAL_CREATED_DATE1'));
+          CreateRow('Mobile Phone: ', GetElqContentPersonalizationValue('C_MobilePhone'));
+          CreateRow('Modello: ', GetElqContentPersonalizationValue('C_Modello1'));
+          CreateRow('Money refund: ', GetElqContentPersonalizationValue('C_Money_refund1'));
+          CreateRow('NAZIONE NASCITA: ', GetElqContentPersonalizationValue('C_NAZIONE_NASCITA1'));
+          CreateRow('News Letter Opt-in: ', GetElqContentPersonalizationValue('C_News_Letter_Opt_in1'));
+          CreateRow('NP Pura: ', GetElqContentPersonalizationValue('C_NP_Pura1'));
+          CreateRow('Numero Accessi Servizi Partner 1M: ', GetElqContentPersonalizationValue('C_Numero_Accessi_Servizi_Partner_1M1'));
+          CreateRow('NUMERO CONTATTO BACKUP 1 CB: ', GetElqContentPersonalizationValue('C_NUMERO_CONTATTO_BACKUP_1_CB1'));
+          CreateRow('NUMERO CONTATTO BACKUP 1 PRS: ', GetElqContentPersonalizationValue('C_NUMERO_CONTATTO_BACKUP_1_PRS1'));
+          CreateRow('NUMERO CONTATTO BACKUP 2: ', GetElqContentPersonalizationValue('C_NUMERO_CONTATTO_BACKUP_21'));
+          CreateRow('P.IVA: ', GetElqContentPersonalizationValue('C_P_IVA1'));
+          CreateRow('Partnership: ', GetElqContentPersonalizationValue('C_Partnership1'));
+          CreateRow('Persona ID: ', GetElqContentPersonalizationValue('C_Persona_ID1'));
+          CreateRow('Persona Name: ', GetElqContentPersonalizationValue('C_Persona_Name1'));
+          CreateRow('Port Out cliente: ', GetElqContentPersonalizationValue('C_Port_Out_cliente1'));
+          CreateRow('Portafoglio: ', GetElqContentPersonalizationValue('C_Portafoglio1'));
+          CreateRow('Posizionamento: ', GetElqContentPersonalizationValue('C_Posizionamento1'));
+          CreateRow('Potenziale disdetta: ', GetElqContentPersonalizationValue('C_Potenziale_disdetta1'));
+          CreateRow('Presenza mobile: ', GetElqContentPersonalizationValue('C_Presenza_mobile1'));
+          CreateRow('Privacy: ', GetElqContentPersonalizationValue('C_Consenso_privacy1'));
+          CreateRow('Product/Solution of Interest: ', GetElqContentPersonalizationValue('C_Product_Solution_of_Interest1'));
+          CreateRow('Province: ', GetElqContentPersonalizationValue('C_Province'));
+          CreateRow('Provisioning cliente: ', GetElqContentPersonalizationValue('C_Provisioning_cliente1'));
+          CreateRow('PURL Name: ', GetElqContentPersonalizationValue('C_ElqPURLName'));
+          CreateRow('PURL Name (Default Hypersite): ', GetElqContentPersonalizationValue('C_elqPURLName1'));
+          CreateRow('Recesso cliente: ', GetElqContentPersonalizationValue('C_Recesso_cliente1'));
+          CreateRow('Reclami: ', GetElqContentPersonalizationValue('C_Reclami1'));
+          CreateRow('Reclamo SKY inattivo: ', GetElqContentPersonalizationValue('C_Reclamo_SKY_inattivo1'));
+          CreateRow('REGIME IVA: ', GetElqContentPersonalizationValue('C_PARTITA_IVA1'));
+          CreateRow('Region: ', GetElqContentPersonalizationValue('C_Region1'));
+          CreateRow('Request info fatturazione 1M: ', GetElqContentPersonalizationValue('C_Request_info_fatturazione_1M1'));
+          CreateRow('Request info servizi core: ', GetElqContentPersonalizationValue('C_Request_info_servizi_core1'));
+          CreateRow('Richiesta CDM: ', GetElqContentPersonalizationValue('C_Richiesta_CDM1'));
+          CreateRow('Richiesta info partner: ', GetElqContentPersonalizationValue('C_Richiesta_info_partner1'));
+          CreateRow('Richiesta revoca RID: ', GetElqContentPersonalizationValue('C_Richiesta_revoca_RID1'));
+          CreateRow('Richiesta sostituzione SIM: ', GetElqContentPersonalizationValue('C_Richiesta_sostituzione_SIM1'));
+          CreateRow('Riposizionamento commerciale: ', GetElqContentPersonalizationValue('C_Riposizionamento_commerciale1'));
+          CreateRow('Salesperson: ', GetElqContentPersonalizationValue('C_Salesperson'));
+          CreateRow('Salutation: ', GetElqContentPersonalizationValue('C_Salutation'));
+          CreateRow('SEGMENTO: ', GetElqContentPersonalizationValue('C_SEGMENTO1'));
+          CreateRow('Segmento di profilazione: ', GetElqContentPersonalizationValue('C_Segmento_di_profilazione1'));
+          CreateRow('Segmento SHP: ', GetElqContentPersonalizationValue('C_SEGMENTO_SHP1'));
+          CreateRow('Semaforo: ', GetElqContentPersonalizationValue('C_Semaforo1'));
+          CreateRow('Sentiment: ', GetElqContentPersonalizationValue('C_Sentiment1'));
+          CreateRow('SFDC AccountID: ', GetElqContentPersonalizationValue('C_SFDCAccountID'));
+          CreateRow('SFDC ContactID: ', GetElqContentPersonalizationValue('C_SFDCContactID'));
+          CreateRow('SFDC EmailOptOut: ', GetElqContentPersonalizationValue('C_SFDC_EmailOptOut1'));
+          CreateRow('SFDC LeadID: ', GetElqContentPersonalizationValue('C_SFDCLeadID'));
+          CreateRow('SHA256 Hashed Business Phone: ', GetElqContentPersonalizationValue('C_SHA256HashedBusPhone'));
+          CreateRow('SHA256 Hashed Email Address: ', GetElqContentPersonalizationValue('C_SHA256HashedEmailAddress'));
+          CreateRow('SHA256 Hashed Mobile Phone: ', GetElqContentPersonalizationValue('C_SHA256HashedMobilePhone'));
+          CreateRow('Siebel OnDemand Account ID: ', GetElqContentPersonalizationValue('C_SiebelOnDemandAccountID'));
+          CreateRow('Siebel OnDemand Contact ID: ', GetElqContentPersonalizationValue('C_SiebelOnDemandContactID'));
+          CreateRow('Siebel OnDemand Email Opt Out: ', GetElqContentPersonalizationValue('C_SiebelOnDemandEmailOptOut'));
+          CreateRow('Siebel OnDemand Lead ID: ', GetElqContentPersonalizationValue('C_SiebelOnDemandLeadID'));
+          CreateRow('Siebel OnDemand Lead Rating: ', GetElqContentPersonalizationValue('C_SiebelOnDemandLeadRating'));
+          CreateRow('Source: ', GetElqContentPersonalizationValue('C_Source1'));
+          CreateRow('SR count 1M: ', GetElqContentPersonalizationValue('C_SR_count_1M1'));
+          CreateRow('SR count 3M: ', GetElqContentPersonalizationValue('C_SR_count_3M1'));
+          CreateRow('SR Out 1M: ', GetElqContentPersonalizationValue('C_SR_Out_1M1'));
+          CreateRow('SR Out 3M: ', GetElqContentPersonalizationValue('C_SR_Out_3M1'));
+          CreateRow('State or Province: ', GetElqContentPersonalizationValue('C_State_Prov'));
+          CreateRow('STATO CLIENTE: ', GetElqContentPersonalizationValue('C_Stato1'));
+          CreateRow('Stato in rete: ', GetElqContentPersonalizationValue('C_Stato_in_rete1'));
+          CreateRow('Stato ticket legale: ', GetElqContentPersonalizationValue('C_Stato_ticket_legale1'));
+          CreateRow('Storico collection: ', GetElqContentPersonalizationValue('C_Storico_collection1'));
+          CreateRow('Storico dunning: ', GetElqContentPersonalizationValue('C_Storico_dunning1'));
+          CreateRow('Territory: ', GetElqContentPersonalizationValue('C_Territory'));
+          CreateRow('Test Multi-Select: ', GetElqContentPersonalizationValue('C_Test_Multi_Select1'));
+          CreateRow('Tipo Telefono Preferito: ', GetElqContentPersonalizationValue('C_Tipo_Telefono_Preferito1'));
+          CreateRow('Title: ', GetElqContentPersonalizationValue('C_Title'));
+          CreateRow('TOTAL SUBSCRIPTIONS WLN: ', GetElqContentPersonalizationValue('C_TOTAL_SUBSCRIPTIONS_WLN1'));
+          CreateRow('Trasloco cliente: ', GetElqContentPersonalizationValue('C_Trasloco_cliente1'));
+          CreateRow('Untitled Contact Field: ', GetElqContentPersonalizationValue('C_Untitled_Contact_Field1'));
+          CreateRow('Usage sezione MFP: ', GetElqContentPersonalizationValue('C_Usage_sezione_MFP1'));
+          CreateRow('VIP: ', GetElqContentPersonalizationValue('C_VIP1'));
+          CreateRow('Zip or Postal Code: ', GetElqContentPersonalizationValue('C_Zip_Postal'));
+      } else {
+          CreateRow('Personalization functions not found','');
+       }
+    }
+    
+    
+    
+        
+        SetElqContent();
+        </script>
+</html>
+
+
